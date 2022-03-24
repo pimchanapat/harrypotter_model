@@ -1,0 +1,9 @@
+name: harrypotter-api-venv
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - face_recognition
+  - fastapi
+  - uvicorn
+  - python-multipart

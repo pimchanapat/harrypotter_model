@@ -1,0 +1,4 @@
+uvicorn Face_rec_api:app --host 0.0.0.0 --port 80 --reload
+
+** Open API
+http://127.0.0.1/docs#/default/faces_recognition_faces_recognition__post

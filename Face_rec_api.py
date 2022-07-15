@@ -45,3 +45,4 @@ async def faces_recognition(image_upload: UploadFile = File(...)):
     image_byte_arr = io.BytesIO()
     image.save(image_byte_arr, format='PNG')
     image_byte_arr = image_byte_arr.getvalue()
+    return StreamingResponse(io.BytesIO(image_byte_arr), media_type='image/png')

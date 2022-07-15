@@ -1,4 +1,22 @@
+## Deploy API
 uvicorn Face_rec_api:app --host 0.0.0.0 --port 80 --reload
 
-** Open API
+## Open API
 http://127.0.0.1/docs#/default/faces_recognition_faces_recognition__post
+
+## Build Docker Image
+docker build --tag face-api:latest .
+
+## Run Container
+docker run -p 80:5000 -d --name face-api face-api
+
+## Connect Heroku 
+heroku login
+heroku container:login
+
+## Craete Application
+heroku create chnp-face-api
+
+## Deploy API to Application
+heroku container:push web -a chnp-face-api
+heroku container:release web -a chnp-face-api
